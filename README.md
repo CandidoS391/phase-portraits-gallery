@@ -22,26 +22,26 @@ Now for each portrait that you will see throughout the video, each of them are g
 
 The spiral sink is a phase portrait that arises from a linear system of differential equations of the form
 
-\[
+$$
 \dot{\vec{x}} = A\vec{x}, \quad \text{where } \vec{x} = \begin{bmatrix} x \\ y \end{bmatrix}
-\]
+$$
 
 and the matrix \( A \) has complex eigenvalues with negative real parts.
 
 In this case, a representative system is given by
 
-\[
+$$
 A = \begin{bmatrix}
 -1 & -2 \\
 2 & -1
 \end{bmatrix}
-\]
+$$
 
 which produces eigenvalues of the form
 
-\[
+$$
 \lambda = -1 \pm 2i
-\]
+$$
 
 Because the real part of the eigenvalues is negative, all trajectories decay toward the origin over time. The imaginary component introduces rotation, causing the trajectories to spiral rather than move directly inward.
 
@@ -55,24 +55,24 @@ This system highlights how eigenvalues directly determine the qualitative behavi
 
 The center phase portrait arises from a linear system of differential equations of the form
 
-\[
+$$
 \dot{\vec{x}} = A\vec{x}, \quad \text{where } \vec{x} = \begin{bmatrix} x \\ y \end{bmatrix}
-\]
+$$
 
 A representative system is given by
 
-\[
+$$
 A = \begin{bmatrix}
 0 & -1 \\
 1 & 0
 \end{bmatrix}
-\]
+$$
 
 The eigenvalues of this system are
 
-\[
+$$
 \lambda = \pm i
-\]
+$$
 
 Because the eigenvalues of this matrix are purely imaginary (meaning the real Eigenvalues is zero), there is no exponential growth nor decay within the phase portrait. 
 
@@ -88,24 +88,24 @@ This behavior reflects a system that conserves an energy-like quantity, where mo
 
 The saddle point phase portrait arises from a linear system of differential equations of the form
 
-\[
+$$
 \dot{\vec{x}} = A\vec{x}, \quad \text{where } \vec{x} = \begin{bmatrix} x \\ y \end{bmatrix}
-\]
+$$
 
 A representative system is given by
 
-\[
+$$
 A = \begin{bmatrix}
 1 & 0 \\
 0 & -1
 \end{bmatrix}
-\]
+$$
 
 The eigenvalues of this system are
 
-\[
+$$
 \lambda_1 = 1, \quad \lambda_2 = -1
-\]
+$$
 
 As this system has one positive and one negative eigenvalue, this causes solutions to the system to either move toward the origin along the path of one of the eigenvectors, or move away from the origin along the path of the other eigenvector. 
 
@@ -117,24 +117,24 @@ That's why this system is known as a *saddle* portrait as within this portrait, 
 
 The defective node phase portrait arises from a linear system of differential equations of the form
 
-\[
+$$
 \dot{\vec{x}} = A\vec{x}, \quad \text{where } \vec{x} = \begin{bmatrix} x \\ y \end{bmatrix}
-\]
+$$
 
 A representative system is given by
 
-\[
+$$
 A = \begin{bmatrix}
 -1 & 1 \\
 0 & -1
 \end{bmatrix}
-\]
+$$
 
 The eigenvalues of this system are
 
-\[
+$$
 \lambda = -1
-\]
+$$
 
 with only one linearly independent eigenvector.
 
@@ -144,33 +144,33 @@ The rotated defective system is a variation of a defective node, obtained by app
 
 A representative system is given by
 
-\[
+$$
 A = \begin{bmatrix}
 2 & 1 \\
 -1 & 4
 \end{bmatrix}
-\]
+$$
 
 The eigenvalues of this system are
 
-\[
+$$
 \lambda = 3
-\]
+$$
 
 with only one linearly independent eigenvector.
 
 ### Damped Pendulum
 
-The damped pendulum is governed by a nonlinear system of differential equations given by
+The damped pendulum is governed by a nonlinear differential equation written as:
 
-\[
+$$
 \dot{\theta} = \omega, \qquad \dot{\omega} = -\sin(\theta) - c\omega
-\]
+$$
 
 where:
-\[
+$$
 \theta = \text{angular position}, \quad \omega = \text{angular velocity}, \quad c > 0
-\]
+$$
 
 
 ## Technical Notes
@@ -212,4 +212,4 @@ The visual style is carefully chosen to emphasize clarity and aesthetics:
 
 Overall, the project aims to balance mathematical accuracy with visual presentation, treating each phase portrait as both a computational result and a piece of mathematical art.
 
-## 
+ 
