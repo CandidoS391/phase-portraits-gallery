@@ -125,7 +125,7 @@ $$
 \dot{\vec{x}} = A\vec{x}, \quad \text{where } \vec{x} = \begin{bmatrix} x \\ y \end{bmatrix}
 $$
 
-A representative system is given by
+A representative system in the form of matrix **A** is given by
 
 $$
 A = \begin{bmatrix}
@@ -182,7 +182,7 @@ Visually, because of the trajectories now converging onto a tilted line, it caus
 The damped pendulum is governed by a nonlinear differential equation written as:
 
 $$
-\ddot{\theta} + c\,\dot{\theta} + \frac{g}{L}\sin(\theta) = 0
+\ddot{\theta} + c\dot{\theta} + \frac{g}{L}\sin(\theta) = 0
 $$
 
 which can be rewritten as the system
@@ -193,7 +193,7 @@ $$
 $$
 
 Where: 
-$c > 0$
+$$c > 0$$
 
 Whilst all of the systems so far in the gallery were linear; for this last portrait the system is nonlinear (due to the $\sin(\theta)$), allowing for behaviors to become richer in visual, and therefore the portrait becoming more organic. 
 
@@ -213,7 +213,7 @@ This project combines numerical methods, dynamical systems, and visualization te
 
 ### Numerical Integration
 
-Trajectories are generated using the fourth-order Runge–Kutta (RK4) method. This allows for accurate approximation of solutions to both linear and nonlinear differential equations without requiring closed-form solutions.
+Trajectories are generated using the [fourth-order Runge–Kutta (RK4) method](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods). This allows for accurate approximation of solutions to both linear and nonlinear differential equations without requiring closed-form solutions.
 
 ### Forward and Backward Integration
 
