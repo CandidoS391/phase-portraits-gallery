@@ -18,6 +18,8 @@ For more information on Phase Portraits, see the [Wikipedia article on phase por
 ## The Gallery
 Now for each portrait that you will see throughout the video, each of them are governed by a specific differential equation and set of conditions. This section will provide a mathematical explanation of each differential equation that sets up the phase portrait, as well as the qualitiative features observed in phase portraits. 
 
+**Disclaimer**: For linear systems, a knowledge of eigenvalues and eigenvectors is a prerequisite for understanding the mathematical concepts presented in the explanations. For more info on eigentheory, see the [Wikipedia article on eigenvalues and eigenvectors](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors)
+
 ### Spiral Sink
 
 The spiral sink is a phase portrait that arises from a linear system of differential equations of the form
@@ -28,7 +30,7 @@ $$
 
 and the matrix \( A \) has complex eigenvalues with negative real parts.
 
-In this case, a representative system is given by
+In this case, matrix **A** is given by
 
 $$
 A = \begin{bmatrix}
@@ -59,7 +61,7 @@ $$
 \dot{\vec{x}} = A\vec{x}, \quad \text{where } \vec{x} = \begin{bmatrix} x \\ y \end{bmatrix}
 $$
 
-A representative system is given by
+A representative system in the form of matrix **A** is given by
 
 $$
 A = \begin{bmatrix}
@@ -92,7 +94,7 @@ $$
 \dot{\vec{x}} = A\vec{x}, \quad \text{where } \vec{x} = \begin{bmatrix} x \\ y \end{bmatrix}
 $$
 
-A representative system is given by
+A representative system in the form of matrix **A** is given by
 
 $$
 A = \begin{bmatrix}
@@ -107,11 +109,13 @@ $$
 \lambda_1 = 1, \quad \lambda_2 = -1
 $$
 
-As this system has one positive and one negative eigenvalue, this causes solutions to the system to either move toward the origin along the path of one of the eigenvectors, or move away from the origin along the path of the other eigenvector. 
+Because this system has one positive and one negative eigenvalue, this causes solutions to the system to either move toward the origin along the path of one of the eigenvectors, or move away from the origin along the path of the other eigenvector. 
 
-Because of this, that means one direction is experiencing exponential growth and the other experiencing decay, resulting in the two directions diverging away from the origin, and making the origin itself unstable. 
+With the signs of the eigenvalues clashing, this means that one direction is experiencing exponential growth and the other experiencing decay, resulting in the two directions diverging away from the origin, and making the origin itself unstable. 
 
 That's why this system is known as a *saddle* portrait as within this portrait, the trajectories are approaching the origin before diverging, showcasing how a mixed set of eigenvalues produces instability at the origin. 
+
+This is seen within the phase portrait as the different trajectories approach the origin from the y-axis, they start to diverge away from the origin and converge onto the x-axis, creating these hyperola-like curves and thus giving the saddle name. 
 
 ### Defective Node
 
@@ -138,11 +142,19 @@ $$
 
 with only one linearly independent eigenvector.
 
+Since there's only one *real* eigenvalue, and by extension one eigenvector, the system lacks enough independent directions for trajectories to follow.
+
+Because of this, the lone eigenvector defines the direction of motion within the portrait (in this case, it is set by the x-axis). Meanwhile the other trajectories that don't start on the line gradually bend towards the same direction as the vector, eventually aligning to the vector as $t \to \infty$, where $t$ denotes time.
+
+Whilst the trajectories still converge on the origin due to the lone eigenvalue being negative - and thus making the phase portrait stable - because of the unatrual behavior of the trajectories, they are not symmetric like a normal node, and the behavior visually seems to be bending and collapsing onto a single line. Thus, this node is considered to be a *Defective Node*.
+
+This behavior highlights how the absence of a full set of eigenvectors alters the geometry of the system, even when the eigenvalues alone suggest stability.
+
 ### Rotated Defective System 
 
 The rotated defective system is a variation of a defective node, obtained by applying a transformation to the system matrix.
 
-A representative system is given by
+A representative system in the form of matrix **A** is given by
 
 $$
 A = \begin{bmatrix}
@@ -157,21 +169,43 @@ $$
 \lambda = 3
 $$
 
-with only one linearly independent eigenvector.
+With only one linear indepedent eigenvector.
+
+This system is much like the previous defective system, where there's only one real eigenvalue, and by extension only one eigenvector; resulting in the few independent trajectories to bend and eventually align onto the direction set by the eigenvector as $t \to \infty$. 
+
+The only difference now is that this particular eigenvector is no longer aligned with the x-axis and instead now tilted, and because all trajectories are aligned with this vector, it causes the whole portrait to be rotated as well. Thus giving the classification of the **Rotated Defective System**. 
+
+Visually, because of the trajectories now converging onto a tilted line, it causes the portrait to look more skewed, rotated, and less "axis-aligned" compared to the last defective system. Thus demonstrating how under a change of basis, the qualitative behaviors of a dynamical system don't change, but rather the orientation of said behaviors.  
 
 ### Damped Pendulum
 
 The damped pendulum is governed by a nonlinear differential equation written as:
 
 $$
-\dot{\theta} = \omega, \qquad \dot{\omega} = -\sin(\theta) - c\omega
+\ddot{\theta} + c\,\dot{\theta} + \frac{g}{L}\sin(\theta) = 0
 $$
 
-where:
+which can be rewritten as the system
+
 $$
-\theta = \text{angular position}, \quad \omega = \text{angular velocity}, \quad c > 0
+\dot{\theta} = \omega, \qquad 
+\dot{\omega} = -\frac{g}{L}\sin(\theta) - c\omega
 $$
 
+Where: 
+$c > 0$
+
+Whilst all of the systems so far in the gallery were linear; for this last portrait the system is nonlinear (due to the $\sin(\theta)$), allowing for behaviors to become richer in visual, and therefore the portrait becoming more organic. 
+
+Breaking down the equation, which represnts a pendulum in motion, $\ddot{\theta}$ represents acceleration, and how the system changes over time. $\frac{g}{L}\sin(\theta)$ represents restoring force that pulls the pendulum  back towards equilibrium. And $c\dot{\theta}$ represents the damping term, or in other words the term that pushes back against motion by removing energy over time.
+
+Now how this plays out in the portrait is based on the energy of the pendulum. If there's low energy being used (aka a small initial condition), this results in oscillation where the pendulum swings back and forth, creating these inward spirals with damping. If there's high energy (or a large initial condition), then rotation is in effect, where the pendulum goes all the way around with continuous motion, creating these long-wave curves along the plane. 
+
+Between these two types of movement exerted in the pendulum, there is a very exact threshold between the two, resulting in very sensitive behavior being played out if this threshold is crossed. On the portrait, it can be visualized by the curves that separate the inner loops of the portrait from the outer waves. 
+
+Meanwhile, the damping term is important in this portrait as because of this damping, energy is decreasing over time, forcing trajectories to all converge to the equilibrium point. Visually, this causes loops within the portrait to spiral inward, rotations slowing down eventually, and everything settling into a stable equilibrium. 
+
+In short, the damped pendulum showcases both oscillatory and rotation motion, with damping forces coming in to settle trajectories down into a stable equilibrium, creating a visually striking phase portrait. 
 
 ## Technical Notes
 
