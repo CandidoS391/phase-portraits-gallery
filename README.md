@@ -3,7 +3,7 @@
 ## Overview
 This is a Python/Manim project that not only explores the mathematics, but also the art and beauty of Phase Portraits that arise from differential equations.
 
-This project combines the  mathematical concepts of differential equations and dynamical systems, the numerical techniques of solving these systems such as the RK4 (Runge-Kutta) Method, and the creative capabilities of Python and Manim to create a visually pleasing collection of art that will be shown here.
+This project combines the mathematical concepts of differential equations and dynamical systems, the numerical techniques of solving these systems such as the RK4 (Runge-Kutta) Method, and the creative capabilities of Python and Manim to create a visually pleasing collection of art that will be shown here.
 
 To view the animation, [here's the link](https://drive.google.com/file/d/1ta7rnpXjM69F5B1s-VTPhQ58pqybgBPN/view?usp=sharing)
 
@@ -18,7 +18,7 @@ For more information on Phase Portraits, see the [Wikipedia article on phase por
 ## The Gallery
 Now for each portrait that you will see throughout the video, each of them are governed by a specific differential equation and set of conditions. This section will provide a mathematical explanation of each differential equation that sets up the phase portrait, as well as the qualitiative features observed in phase portraits. 
 
-**Disclaimer**: For linear systems, a knowledge of eigenvalues and eigenvectors is a prerequisite for understanding the mathematical concepts presented in the explanations. For more info on eigentheory, see the [Wikipedia article on eigenvalues and eigenvectors](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors)
+**Disclaimer**: For most of the dynamical systems in the gallery, a basic knowledge of eigenvalues and eigenvectors is recommended for understanding the mathematical concepts presented in the explanations, though it is *not* required to fully enjoy the visual behavior of the portraits. For more info on eigentheory, see the [Wikipedia article on eigenvalues and eigenvectors](https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors)
 
 ### Spiral Sink
 
